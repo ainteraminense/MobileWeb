@@ -12,3 +12,12 @@ function showCalculatedRating(){
     var overallRating = getOverallRating(foodQuality,service,value);
     $("#overallRatings").val(overallRating);
 }
+
+function showHideRatingFields() {
+    if ($("#cbAddRatings").is(':checked')){
+        $("#ratingFields").show();
+    }
+    else{
+        $("#ratingFields").hide();
+    }
+}

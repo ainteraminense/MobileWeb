@@ -9,11 +9,15 @@ function ratingCalculate() {
     showCalculatedRating();
 }
 
+function ratingFields() {
+    showHideRatingFields();
+}
+
 function init() {
     $("#foodQuality").on("change", ratingCalculate)
     $("#service").on("change", ratingCalculate);
     $("#value").on("change", ratingCalculate);
-    $("#btnSave").on("click", ratingCalculate)
+    $("#cbAddRatings").on("click",ratingFields)
 }
 
 $(document).ready(function () {
