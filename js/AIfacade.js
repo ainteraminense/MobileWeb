@@ -39,3 +39,12 @@ function addForm() {
         console.log("Add form is INVALID");
     }
 }
+
+function modifyform() {
+    if (doValidate_frmModify()) {
+        console.log(("Modify form is VALID"));
+    }
+    else{
+        console.log("Modify form is INVALID");
+    }
+}
