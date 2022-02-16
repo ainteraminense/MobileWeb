@@ -22,8 +22,10 @@ email:      amirandainteram6730@conestogac.on.ca
     <script src="js/AIdatabase.js"></script>
     <script src="js/AIDAL.js"></script>
     <script src="js/AIfacade.js"></script>
-    <script src="js/AIutil.js.js"></script>
-    <script src="js/AIglobal.js.js"></script>
+    <script src="js/AIutil.js"></script>
+    <script src="js/AIglobal.js"></script>
+    <!--my stylesheet-->
+    <link rel="stylesheet" href="css/AImystyle.css">
 </head>
 <!--Home Page-->
 <div id="AIHomePage" data-role="page">
@@ -82,9 +84,21 @@ email:      amirandainteram6730@conestogac.on.ca
             <input type="text" id="reviewEmail" name="reviewEmail"/>
             <label for="reviewerComments">Reviewer Comments:</label>
             <textarea id="reviewerComments" name="reviewerComments"></textarea>
-            <label for="overallRatings">Overall Ratings:</label>
-            <input type="number" id="overallRatings" name="overallRatings"/>
-            <button id="btnSave" name="btnSave" class="ui-btn-active" style="width: 25%">Save</button>
+            <label for="dtReviewDate">Review Date</label>
+            <input type="date" id="dtReviewDate" name="dtReviewDate">
+            <input type="checkbox" id="cbAddRatings" name="cbAddRatings">
+            <label for ="cbAddRatings">Do you want to add your ratings?</label>
+            <div id="ratingsField" >
+                <label for="foodQuality">Food Quality (0-5):</label>
+                <input type="number" id="foodQuality" name="foodQuality" value="0">
+                <label for="service">Service (0-5):</label>
+                <input type="number" id="service" name="service" value="0">
+                <label for="value">Value (0-5):</label>
+                <input type="number" id="value" name="value" value="0">
+            </div>
+            <label for="overallRatings">Overall Ratings (Calculated):</label>
+            <input type="text" id="overallRatings" name="overallRatings" readonly/>
+            <button id="btnSave" name="btnSave" type="button" class="ui-btn-active">Save</button>
         </form>
     </section>
     <footer data-role="footer" data-position="fixed">
@@ -154,13 +168,10 @@ email:      amirandainteram6730@conestogac.on.ca
                 <label for="overallModifyRatings">Overall Ratings:</label>
                 <input type="number" id="overallModifyRatings" name="overallModifyRatings" value="100"/>
                 <div data-role="controlgroup" data-type="horizontal">
-                    <button id="btnCancel" name="btnCancel" data-theme="a">Cancel</button>
-                    <button id="btnDelete" name="btnDelete" data-theme="b">Delete</button>
-                    <button id="btnUpdate" name="btnUpdate" class="ui-btn-active">Update</button>
+                    <button type="button" id="btnCancel" name="btnCancel" data-theme="a">Cancel</button>
+                    <button type="button" id="btnDelete" name="btnDelete" data-theme="b">Delete</button>
+                    <button type="button" id="btnUpdate" name="btnUpdate" class="ui-btn-active">Update</button>
                 </div>
-<!--
-                <button id="btnSabe" name="btnSave" class="ui-btn-active" style="width: 25%">Save</button>
--->
             </form>
         </section>
         <footer data-role="footer" data-position="fixed">
@@ -184,12 +195,11 @@ email:      amirandainteram6730@conestogac.on.ca
         <section data-role="content">
             <label for="reviewerEmail">Default reviewer Email:</label>
             <input type="text" id="reviewerEmail" name="reviewerEmail">
-            <button id="btnSaveSettings" name="btnSaveSettings" class="ui-btn-active">Save defaults</button>
-            <button id="btnClear" name="btnClear" data-theme="b">Clear Database</button>
+            <button type="button" id="btnSaveSettings" name="btnSaveSettings" class="ui-btn-active">Save defaults</button>
+            <button type="button" id="btnClear" name="btnClear" data-theme="b">Clear Database</button>
         </section>
         <footer data-role="footer" data-position="fixed">
             <h1>&copy;2022 Armando Interaminense</h1>
         </footer>
 </div>
-<html/>
 </html>
