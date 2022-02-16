@@ -165,6 +165,18 @@ email:      amirandainteram6730@conestogac.on.ca
                 <input type="text" id="reviewModifyEmail" name="reviewModifyEmail" value="JDean@email.com"/>
                 <label for="reviewerModifyComments">Reviewer Comments:</label>
                 <textarea id="reviewerModifyComments" name="reviewerModifyComments">Excellent customer service!</textarea>
+                <label for="dtReviewDateModify">Review Date</label>
+                <input type="date" id="dtReviewDateModify" name="dtReviewDateModify">
+                <input type="checkbox" id="cbAddRatingsModify" name="cbAddRatingsModify">
+                <label for ="cbAddRatingsModify">Do you want to add your ratings?</label>
+                <div id="ratingFieldsModify" hidden>
+                    <label for="foodQualityModify">Food Quality (0-5):</label>
+                    <input type="number" id="foodQualityModify" name="foodQualityModify" value="0">
+                    <label for="serviceModify">Service (0-5):</label>
+                    <input type="number" id="serviceModify" name="serviceModify" value="0">
+                    <label for="valueModify">Value (0-5):</label>
+                    <input type="number" id="valueModify" name="valueModify" value="0">
+                </div>
                 <label for="overallModifyRatings">Overall Ratings:</label>
                 <input type="number" id="overallModifyRatings" name="overallModifyRatings" value="100"/>
                 <div data-role="controlgroup" data-type="horizontal">

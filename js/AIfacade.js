@@ -21,3 +21,12 @@ function showHideRatingFields() {
         $("#ratingFields").hide();
     }
 }
+
+function showHideRatingFieldsModify(){
+    if ($("#cbAddRatingsModify").is(':checked')){
+        $("#ratingFieldsModify").show();
+    }
+    else{
+        $("#ratingFieldsModify").hide();
+    }
+}
