@@ -30,3 +30,12 @@ function showHideRatingFieldsModify(){
         $("#ratingFieldsModify").hide();
     }
 }
+
+function addForm() {
+    if (doValidate_frmAdd()) {
+        console.log(("Add form is VALID"));
+    }
+    else{
+        console.log("Add form is INVALID");
+    }
+}
