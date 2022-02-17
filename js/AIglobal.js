@@ -25,6 +25,11 @@ function btnUpdate_Click() {
     modifyform();
 }
 
+function btnSaveSettings_Click() {
+    localStorage.setItem("DefaultEmail",$("#reviewerEmail").val());
+    alert("Default reviewer email saved.");
+}
+
 function init() {
     $("#foodQuality").on("change", ratingCalculate)
     $("#service").on("change", ratingCalculate);
@@ -35,6 +40,8 @@ function init() {
 
     $("#btnSave").on("click", btnAdd_Click);
     $("#btnUpdate").on("click", btnUpdate_Click);
+
+    $("#btnSaveSettings").on("click", btnSaveSettings_Click)
 }
 
 $(document).ready(function () {
